@@ -7,6 +7,13 @@
         ]
     },
     { 
+        "file": "75-0-2-6-version2.dlc", 
+        "title": "Science",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,2,6] }
+        ]
+    },
+    { 
         "file": "hacked.dlc", 
         "title": "HACKED",
         "buttons": [
