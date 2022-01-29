@@ -1,6 +1,6 @@
 [
     { 
-        "file": "75-0-2-6-version2.dlc", 
+        "file": "Science.dlc", 
         "title": "Science",
         "buttons": [
             { "title": "Logo", "action": [75,0,2,6] }
