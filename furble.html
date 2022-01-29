@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Furby Web Bluetooth</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='furble.css'>
+</head>
+<body>
+
+<!-- for slide-in status messages -->
+<div id='status' class='ok'>Connected!</div>
+
+<!-- menu button and menu -->
+<button id='hamburger'>☰</button>
+<div id='menu'>
+    <h2>FurBLE</h2>
+    <ul>
+        <li><a href='#actions'>Actions</a></li>
+        <li><a href='#misc'>Misc</a></li>
+        <li><a href='#dlc'>DLC Upload</a></li>
+        <li><a href='#sensors'>Sensors</a></li>
+        <li><a href='#debug'>Debug</a></li>
+    </ul>
+</div>
+
+
+<div class='header'>
+        <button id='connbtn' onclick='doConnectDisconnect()'>Connect</button>
+    <div><h1>FurBLE</h1>
+    <span id='state'>Not connected</span></div>
+    
+</div>
+
+<div id='furby-buttons'>
+
+    <section id='misc'>
+        <h2>Antenna Colour</h2>
+        <div class='row'>
+            <button onclick='setAntennaColor(255, 0,0)'>Red</button>
+            <button onclick='setAntennaColor(0, 255,0)'>Green</button>
+            <button onclick='setAntennaColor(0, 0, 255)'>Blue</button>
+            <button onclick='setAntennaColor(255, 255, 255)'>White</button>
+        </div>
+    </section>
+
+    <section id='actions'>
+        <h2>Action Sequences</h2>
+        <div class='row' id='dlc-actions'></div>
+        <div class='row'>
+            <button onclick='triggerAction(39,3,8,1)'>Legendary!</button>
+            <button onclick='triggerAction(39,4,6,1)'>Nice</button>
+            <button onclick='triggerAction(39,3,1,1)'>Hey, hey</button>
+        </div>
+        <div class='row'>
+            <input type='number' min='0' max='75' name='furby-action' value='39'>
+            <input type='number' min='0' max='4' name='furby-action' value='0'>
+            <input type='number' min='0' max='30' name='furby-action' value='0'>
+            <input type='number' min='0' max='10' name='furby-action' value='0'>
+            <button onclick='customAction()'>Send</button>
+        </div>
+    </section>
+
+    <section id='debug'>
+        <h2>Debug</h2>
+        <div class='row'>
+            <button onclick='cycleDebug()'>Eye Debug</button>
+            <button onclick='enableEyes(false)'>Eyes off</button>
+            <button onclick='enableEyes(true)'>Eyes on</button>
+        </div>
+    </section>
+
+    <section id='dlc'>
+        <h2>DLC Files</h2>
+        <div class='row'>
+            <select id='dlcname'></select>
+            <button onclick='dlcUploadClicked()'>Upload</button>
+        </div>
+        <progress id='dlcprogress'></progress>
+    </section>
+
+    <section id='sensors'>
+        <h2>Sensors</h2>
+        <!--<div class='row'>
+                <button onclick='sendGPCmd([0x20, 0x0d])'>Start continuous</button>
+                <button onclick='sendGPCmd([0x20, 0x0e])'>Stop continuous</button>
+        </div>
+        <h2>State</h2>-->
+        <ul id='sensor-state'><li>Waiting for connection...</li></ul>
+    </section>
+
+    <section id='no-web-bluetooth'>
+        <h3>Sorry, this browser doesn't seem to support Web Bluetooth. Works best with Chrome for Android.</h3>
+    </section>
+</div>
+
+
+<div id="console">
+    <button onclick='log2clipboard()' class='clip'>Copy to Clipboard</button> <h3 onclick='toggleConsole()'>Log Output</h3>
+<div id="out" style="white-space:pre"></div>
+</div>
+
+<script>
+var dlcsel = document.getElementById('dlcname');
+var s = document.createElement('script');
+s.src = 'furble.js?' + Math.random();
+document.body.appendChild(s);
+s.onload = () => {
+    log('ready!');
+    enableButtons(false);
+    updateCurrentSection();
+    loadDLCIndex();
+}
+    
+var out = document.getElementById('out');
+out.addEventListener('transitionend', e => out.scrollTop=out.scrollHeight);
+function toggleConsole() {
+    document.getElementById('console').classList.toggle('expanded');
+}
+
+document.querySelectorAll('input[type=number]').forEach(el => {
+    el.addEventListener('focus', () => {
+        el.select();
+        document.body.classList.add('keyboard');
+    });
+    el.addEventListener('blur', el => document.body.classList.remove('keyboard'));
+})
+
+function showStatus(msg, cls) {
+    let el = document.getElementById('status');
+    el.className = '';
+    el.classList.add('on');
+    el.classList.add(cls);
+    el.textContent = msg;
+    setTimeout(() => el.classList.remove('on'), 1500);
+    log(cls + ': ' + msg);
+}
+
+var msg = {
+    ok: s => showStatus(s, 'ok'),
+    error: s => showStatus(s, 'error'),
+};
+
+function updateCurrentSection() {
+    let current = location.hash.substr(1);
+    if (current == '') current = 'dlc';
+    if ('bluetooth' in navigator === false) 
+        current = 'no-web-bluetooth';
+    showSection(current);
+}
+
+window.onhashchange = updateCurrentSection; 
+let currentSection = '';
+let dlcdata = {};
+
+
+function showSection(section) {
+    if (currentSection) {
+        try {
+            document.querySelector('section#' + currentSection).classList.remove('current');
+            document.querySelector(`a[href="#${currentSection}`).classList.remove('current');
+        } catch (e) {}
+        
+    }
+    currentSection = section;
+    document.querySelector('section#' + currentSection).classList.add('current');
+    document.querySelector(`a[href="#${currentSection}`).classList.add('current');
+}
+
+async function loadDLCIndex() {
+    let resp = await fetch('dlc/index.js');
+    let data = await resp.json();
+
+    for (let dlc of data) {
+        let opt = document.createElement('option');
+        if (dlc.file.length > 12) {
+            log('DLC filename must be <= 12 chars, got ' + dlc.file);
+        }
+            
+        dlcdata[dlc.file] = dlc;
+        opt.value = dlc.file;
+        opt.textContent = dlc.title;
+        dlcsel.appendChild(opt);
+    }
+}
+
+async function dlcUploadClicked() {
+    let dlcfile = dlcsel.options[dlcsel.selectedIndex].value;
+    let params = dlcdata[dlcfile];
+    console.log('DLC upload clicked', params);
+    await fetchAndUploadDLC('dlc/'+dlcfile);
+    setupDLCButtons(params);
+    showSection('actions');
+}
+
+function setupDLCButtons(dlcParams) {
+    let container = document.getElementById('dlc-actions');
+    container.childNodes.forEach(el => el.parentNode.removeChild(el));
+    dlcParams.buttons.forEach(p => {
+        let button = document.createElement('button');
+        button.textContent = p.title;
+        button.onclick = () => {
+            log('Triggering ' + p.title + ' for dlc ' + dlcParams.file);
+            triggerAction.apply(null, p.action);
+        };
+        container.appendChild(button);
+    });
+}
+
+function log2clipboard() {
+    let range = document.createRange();
+    range.selectNode(out);
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    msg.ok('Copied to clipboard');
+}
+
+</script>
+
+</body>
+</html>
