@@ -6,6 +6,20 @@
             { "title": "Logo", "action": [75,0,2,6] }
         ]
     },
+        { 
+        "file": "EvilSeed.dlc", 
+        "title": "EvilSeed",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,2,6] }
+        ]
+    },
+        { 
+        "file": "EvilSeedV2.dlc", 
+        "title": "EvilSeed2",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,2,6] }
+        ]
+    },
     { 
         "file": "context.dlc", 
         "title": "Context Logo",
