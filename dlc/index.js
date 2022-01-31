@@ -6,39 +6,39 @@
             { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
-           { 
-        "file": "EvilV4.dlc", 
-        "title": "EvilSeed4",
-        "buttons": [
-            { "title": "Logo", "action": [75,0,0,1] }
-        ]
-    },   
     { 
-        "file": "Science.dlc", 
-        "title": "Science",
-        "buttons": [
-            { "title": "Logo", "action": [75,0,2,6] }
-        ]
-    },
-        { 
         "file": "EvilSeed.dlc", 
-        "title": "EvilSeed",
+        "title": "Evil",
         "buttons": [
             { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
-        { 
-        "file": "EvilV2.dlc", 
-        "title": "EvilSeed2",
+    { 
+        "file": "Evilv2.dlc", 
+        "title": "Evil3",
         "buttons": [
             { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
-          { 
-        "file": "EvilV3.dlc", 
-        "title": "EvilSeed3",
+    {
+        "file": "Evilv3.dlc", 
+        "title": "Evil3",
         "buttons": [
             { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
+    { 
+        "file": "EvilV4.dlc", 
+        "title": "Evil4",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,0,1] }
+        ]
+    }, 
+    {
+        "file": "chilli.dlc", 
+        "title": "Chilli",
+        "buttons": [
+            { "title": "Chilli ", "action": [75,0,4,4] }
+        ]
+    }
 ]
