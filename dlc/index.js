@@ -1,4 +1,11 @@
 [
+{ 
+        "file": "ScienceV3.dlc", 
+        "title": "Science3",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,2,6] }
+        ]
+    },
  { 
         "file": "ScienceV2.dlc", 
         "title": "Science2",
