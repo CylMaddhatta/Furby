@@ -1,4 +1,11 @@
 [
+           { 
+        "file": "EvilSeedV4.dlc", 
+        "title": "EvilSeed4",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,0,1] }
+        ]
+    },   
     { 
         "file": "Science.dlc", 
         "title": "Science",
