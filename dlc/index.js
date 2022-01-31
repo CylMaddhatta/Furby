@@ -1,6 +1,6 @@
 [
 { 
-        "file": "ScienceV3.dlc", 
+        "file": "SciV3.dlc", 
         "title": "Science3",
         "buttons": [
             { "title": "Logo", "action": [75,0,2,6] }
