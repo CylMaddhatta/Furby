@@ -1,5 +1,13 @@
 [
 { 
+        "file": "SciV4.dlc", 
+        "title": "Sci4",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,0,2] }
+        ]
+    },
+        
+        { 
         "file": "SciV3.dlc", 
         "title": "Sci3",
         "buttons": [
