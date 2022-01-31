@@ -10,14 +10,21 @@
         "file": "EvilSeed.dlc", 
         "title": "EvilSeed",
         "buttons": [
-            { "title": "Logo", "action": [75,0,2,6] }
+            { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
         { 
         "file": "EvilSeedV2.dlc", 
         "title": "EvilSeed2",
         "buttons": [
-            { "title": "Logo", "action": [75,0,2,6] }
+            { "title": "Logo", "action": [75,0,0,1] }
+        ]
+    },
+          { 
+        "file": "EvilSeedV3.dlc", 
+        "title": "EvilSeed3",
+        "buttons": [
+            { "title": "Logo", "action": [75,0,0,1] }
         ]
     },
     { 
