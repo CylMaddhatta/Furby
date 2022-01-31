@@ -7,7 +7,7 @@
         ]
     },
  { 
-        "file": "ScienceV2.dlc", 
+        "file": "SciV2.dlc", 
         "title": "Science2",
         "buttons": [
             { "title": "Logo", "action": [75,0,0,1] }
