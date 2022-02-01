@@ -1,5 +1,12 @@
 [
 { 
+        "file": "SciFix.dlc", 
+        "title": "Science!",
+        "buttons": [
+            { "title": "FUCK MY HOUSE!", "action": [75,0,0,2] }
+        ]
+    },
+        { 
         "file": "SciXMin.dlc", 
         "title": "Science No Minify",
         "buttons": [
