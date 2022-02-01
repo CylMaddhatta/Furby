@@ -1,4 +1,11 @@
 [
+         { 
+        "file": "EvilSeed.dlc", 
+        "title": "Evil Seed",
+        "buttons": [
+            { "title": "What have you done?", "action": [75,0,0,2] }
+        ]
+    },
         { 
         "file": "SciFix.dlc", 
         "title": "Science!",
