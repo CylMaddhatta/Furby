@@ -12,6 +12,14 @@
         "buttons": [
             { "title": "FUCK MY HOUSE!", "action": [75,0,0,2] }
         ]
+    },      
+         { 
+        "file": "Void.dlc", 
+        "title": "WAAAAAGH",
+        "buttons": [
+            { "title": "WAAAAGH!", "action": [75,0,0,2] }
+            { "title": "Void!", "action": [75,0,0,3] }
+        ]
     },
         { 
         "file": "SciXMin.dlc", 
