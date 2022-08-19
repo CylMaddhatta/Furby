@@ -1,5 +1,13 @@
 [
          { 
+        "file": "Void.dlc", 
+        "title": "WAAAAAGH",
+        "buttons": [
+            { "title": "WAAAAGH!", "action": [75,0,0,2] }
+            { "title": "Void!", "action": [75,0,0,3] }
+        ]
+    },
+         { 
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
         "buttons": [
@@ -13,43 +21,8 @@
             { "title": "FUCK MY HOUSE!", "action": [75,0,0,2] }
         ]
     },      
-         { 
-        "file": "Void.dlc", 
-        "title": "WAAAAAGH",
-        "buttons": [
-            { "title": "WAAAAGH!", "action": [75,0,0,2] }
-            { "title": "Void!", "action": [75,0,0,3] }
-        ]
-    },
-        { 
-        "file": "SciXMin.dlc", 
-        "title": "Science No Minify",
-        "buttons": [
-            { "title": "Science!", "action": [75,0,0,2] }
-        ]
-    },
-        { 
-        "file": "SciMin.dlc", 
-        "title": "Science Minify",
-        "buttons": [
-            { "title": "Science!", "action": [75,0,0,2] }
-        ]
-    },
-        { 
-        "file": "SciBin.dlc", 
-        "title": "Science Binary",
-        "buttons": [
-            { "title": "Science!", "action": [75,0,2,6] }
-        ]
-    },
-        { 
-        "file": "SciV4.dlc", 
-        "title": "Sci4",
-        "buttons": [
-            { "title": "Logo", "action": [75,0,0,2] }
-        ]
-    },
-    {
+  
+         {
         "file": "chilli.dlc", 
         "title": "Chilli",
         "buttons": [
