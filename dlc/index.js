@@ -1,12 +1,5 @@
 [
     {
-        "file": "Void.dlc", 
-        "title": "Void",
-        "buttons": [
-            { "title": "Void", "action": [75,0,0,3] }
-        ]
-    },
-    {
         "file": "Waaagh.dlc", 
         "title": "Waaaagh",
         "buttons": [
