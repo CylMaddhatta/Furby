@@ -6,12 +6,11 @@
             { "title": "Void", "action": [75,0,0,3] }
         ]
     },
-                { "title": "Waaagh!", "action": [75,0,0,2] }
-      {
+    {
         "file": "Waaagh.dlc", 
         "title": "Waaaagh",
         "buttons": [
-            { "title": "WAAAAAAGH!", "action": [75,0,0,3] }
+            { "title": "WAAAAAAGH!", "action": [75,0,0,2] }
         ]
     },
     {
