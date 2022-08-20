@@ -1,5 +1,13 @@
 [
     {
+        "file": "Void.dlc", 
+        "title": "Void",
+        "buttons": [
+            { "title": "Void", "action": [75,0,0,2] }
+            { "title": "Waaagh!", "action": [75,0,0,3] }
+        ]
+    },
+    {
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
         "buttons": [
