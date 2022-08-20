@@ -1,20 +1,4 @@
 [
-    { 
-        "file": "Void.dlc", 
-        "title": "WAAAAAGH",
-        "buttons": [
-            { "title": "WAAAAGH!", "action": [75,0,0,2] }
-            { "title": "Void!", "action": [75,0,0,3] }
-        ]
-    },
-    { 
-        "file": "Waagh.dlc", 
-        "title": "WAAAAAGH",
-        "buttons": [
-            { "title": "WAAAAGH!", "action": [75,0,0,2] }
-            { "title": "Void!", "action": [75,0,0,3] }
-        ]
-    },
     {
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
