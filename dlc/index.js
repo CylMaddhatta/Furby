@@ -7,10 +7,11 @@
         ]
     },
     {
-        "file": "Green.dlc", 
+        "file": "Greenfix.dlc", 
         "title": "Green",
         "buttons": [
-            { "title": "Green", "action": [75,0,0,3] }
+            { "title": "Green", "action": [75,0,0,1] }
+            { "title": "Green2", "action": [75,0,0,2] }
         ]
     },
     {
