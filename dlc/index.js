@@ -14,14 +14,6 @@
         ]
     },
     {
-        "file": "Greenfix.dlc", 
-        "title": "Greenfix",
-        "buttons": [
-            { "title": "Green", "action": [75,0,0,1] }
-            { "title": "Green 2", "action": [75,0,0,2] }
-        ]
-    },
-    {
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
         "buttons": [
