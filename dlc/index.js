@@ -7,6 +7,13 @@
         ]
     },
     {
+        "file": "Green.dlc", 
+        "title": "Green",
+        "buttons": [
+            { "title": "Green", "action": [75,0,0,3] }
+        ]
+    },
+    {
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
         "buttons": [
