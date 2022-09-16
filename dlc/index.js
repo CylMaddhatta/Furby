@@ -10,7 +10,7 @@
         "file": "Green.dlc", 
         "title": "Green",
         "buttons": [
-            { "title": "Green", "action": [75,0,0,3] }
+            { "title": "Green", "action": [75,0,0,2] }
         ]
     },
     {
