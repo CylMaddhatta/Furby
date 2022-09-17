@@ -1,18 +1,18 @@
 [
     {
         "file": "Orks.dlc", 
-        "title": "Urk Kuldar1",
+        "title": "Urk Kuldar",
         "buttons": [
-            { "title": "Be Green", "action": [75,0,0,6] },
-            { "title": "Waaagh", "action": [75,0,2,5] },
+            { "title": "Be Green", "action": [75,0,4,1] },
+            { "title": "Waaagh", "action": [75,0,3,2] },
             { "title": "Boss", "action": [75,0,4,7] },
             { "title": "Pee", "action": [75,0,6,5] },
             { "title": "Listen", "action": [75,0,5,6] },
             { "title": "Spit", "action": [75,0,6,6] },
-            { "title": "Snotling", "action": [75,0,2,7] },
+            { "title": "Snotling", "action": [75,0,4,5] },
             { "title": "Top Ork", "action": [75,0,4,6] },
             { "title": "Snivel", "action": [75,0,7,6] },
-            { "title": "In Charge", "action": [75,0,3,2] }
+            { "title": "In Charge", "action": [75,0,3,3] }
         ]
     },
     {
