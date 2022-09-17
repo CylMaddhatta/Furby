@@ -6,7 +6,7 @@
             { "title": "Be Green", "action": [75,0,0,3] },
             { "title": "Waaagh", "action": [75,0,2,7] },
             { "title": "Boss", "action": [75,0,4,7] },
-            { "title": "Pee", "action": [75,0,6,3] },
+            { "title": "Pee", "action": [75,0,6,4] },
             { "title": "Listen", "action": [75,0,5,6] },
             { "title": "Spit", "action": [75,0,6,6] },
             { "title": "Snotling", "action": [75,0,0,5] },
