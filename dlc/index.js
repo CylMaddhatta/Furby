@@ -1,12 +1,5 @@
 [
     {
-        "file": "Waaagh.dlc", 
-        "title": "Waaaagh",
-        "buttons": [
-            { "title": "WAAAAAAGH!", "action": [75,0,0,2] }
-        ]
-    },
-    {
         "file": "Orks.dlc", 
         "title": "Urk Kuldar",
         "buttons": [
@@ -22,6 +15,14 @@
             { "title": "In Charge", "action": [75,0,1,1] }
         ]
     },
+    {
+        "file": "Waaagh.dlc", 
+        "title": "Waaaagh",
+        "buttons": [
+            { "title": "WAAAAAAGH!", "action": [75,0,0,2] }
+        ]
+    },
+    
     {
         "file": "EvilSeed.dlc", 
         "title": "Evil Seed",
