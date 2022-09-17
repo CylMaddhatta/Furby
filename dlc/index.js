@@ -16,10 +16,10 @@
             { "title": "Pee", "action": [75,0,6,3] },
             { "title": "Listen", "action": [75,0,5,6] },
             { "title": "Spit", "action": [75,0,6,6] },
-            { "title": "Snotling", "action": [72,0,0,0] },
+            { "title": "Snotling", "action": [75,0,0,2] },
             { "title": "Top Ork", "action": [75,0,4,6] },
             { "title": "Snivel", "action": [75,0,7,6] },
-            { "title": "In Charge", "action": [70,0,0,0] }
+            { "title": "In Charge", "action": [75,0,0,4] }
         ]
     },
     {
