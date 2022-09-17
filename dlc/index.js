@@ -1,7 +1,7 @@
 [
     {
         "file": "Orks.dlc", 
-        "title": "Urk Kuldar1",
+        "title": "Urk Kuldar",
         "buttons": [
             { "title": "Be Green", "action": [75,0,0,6] },
             { "title": "Waaagh", "action": [75,0,2,5] },
