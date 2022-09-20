@@ -5,7 +5,7 @@
         "buttons": [
             { "title": "Be Green", "action": [75,0,4,1] },
             { "title": "Waaagh", "action": [75,0,3,2] },
-            { "title": "Boss", "action": [75,0,3,1] },
+            { "title": "Boss", "action": [75,0,4,0] },
             { "title": "Pee", "action": [75,0,6,5] },
             { "title": "Listen", "action": [75,0,5,6] },
             { "title": "Spit", "action": [75,0,6,6] },
