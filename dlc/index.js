@@ -1,7 +1,7 @@
 [
     {
         "file": "Orks.dlc", 
-        "title": "Urk Kuldar",
+        "title": "Urk Kuldar1",
         "buttons": [
             { "title": "Be Green", "action": [75,0,4,1] },
             { "title": "Waaagh", "action": [75,0,3,2] },
@@ -12,6 +12,8 @@
             { "title": "Snotling", "action": [75,0,4,5] },
             { "title": "Top Ork", "action": [75,0,4,6] },
             { "title": "Snivel", "action": [75,0,7,6] },
+            { "title": "Void", "action": [75,0,7,3] },
+            { "title": "Orks", "action": [75,0,7,2] },
             { "title": "In Charge", "action": [75,0,3,3] }
         ]
     },
