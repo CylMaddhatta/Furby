@@ -5,7 +5,7 @@
         "buttons": [
             { "title": "Be Green", "action": [75,0,4,1] },
             { "title": "Waaagh", "action": [75,0,3,2] },
-            { "title": "Boss", "action": [75,0,4,7] },
+            { "title": "Boss", "action": [75,0,2,7] },
             { "title": "Pee", "action": [75,0,6,5] },
             { "title": "Listen", "action": [75,0,5,6] },
             { "title": "Spit", "action": [75,0,6,6] },
@@ -14,8 +14,8 @@
             { "title": "Snivel", "action": [75,0,7,6] },
             { "title": "Void", "action": [75,0,0,3] },
             { "title": "Orks", "action": [75,0,0,2] },
-            { "title": "Green iz best", "action": [75,0,0,1] },
-            { "title": "In Charge", "action": [75,0,3,3] }
+            { "title": "Green iz best", "action": [75,0,4,7] },
+            { "title": "In Charge", "action": [75,0,3,3] } 
         ]
     },
     {
